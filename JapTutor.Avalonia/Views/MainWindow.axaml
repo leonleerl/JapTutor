@@ -1,0 +1,68 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:JapTutor.Avalonia.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="1200" d:DesignHeight="750"
+        Width="1200" Height="750"
+        xmlns:local="clr-namespace:JapTutor.Avalonia.Views"
+        x:Class="JapTutor.Avalonia.Views.MainWindow"
+        x:DataType="vm:MainWindowViewModel"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="JapTutor.Avalonia"
+        WindowStartupLocation="CenterScreen"
+        TransparencyLevelHint="AcrylicBlur"
+        Background="Transparent"
+        ExtendClientAreaToDecorationsHint="True">
+
+    <Design.DataContext>
+        <!-- This only sets the DataContext for the previewer in an IDE,
+             to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
+        <vm:MainWindowViewModel/>
+    </Design.DataContext>
+
+    <Panel>
+        <ExperimentalAcrylicBorder IsHitTestVisible="False">
+            <ExperimentalAcrylicBorder.Material>
+                <ExperimentalAcrylicMaterial
+                    BackgroundSource="Digger"
+                    TintColor="Black"
+                    TintOpacity="1"
+                    MaterialOpacity="0.65" />
+            </ExperimentalAcrylicBorder.Material>
+        </ExperimentalAcrylicBorder>
+        <Grid RowDefinitions="1* 8*"
+              ColumnDefinitions="2* 8*" 
+              ShowGridLines="True"
+              >
+            <StackPanel
+                Grid.Row="1" 
+                Grid.Column="0"
+                Spacing="20"
+                Orientation="Vertical"
+                HorizontalAlignment="Center"
+                >
+                <Button Width="100" 
+                        HorizontalContentAlignment="Center"
+                        VerticalContentAlignment="Center"
+                        Content="Hiragana"
+                        Command="{Binding HiraganaNavigationCommand}"/>
+                <Button Width="100" 
+                        HorizontalContentAlignment="Center"
+                        VerticalContentAlignment="Center"
+                        Content="Katakana"
+                        Command="{Binding KatakanaNavigationCommand}"/>
+                <Button Width="100" 
+                        HorizontalContentAlignment="Center"
+                        VerticalContentAlignment="Center"
+                        Content="Kanji"
+                        Command="{Binding KanjiNavigationCommand}"/>
+            </StackPanel>
+            <UserControl
+                Grid.Row="1"
+                Grid.Column="1"
+                Content="{Binding NavigationView}"
+                />
+        </Grid>
+    </Panel>
+</Window>

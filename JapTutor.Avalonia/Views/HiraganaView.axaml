@@ -1,0 +1,38 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:vm="clr-namespace:JapTutor.Avalonia.ViewModels"
+             xmlns:local="clr-namespace:JapTutor.Avalonia.Views"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="JapTutor.Avalonia.Views.HiraganaView"
+             x:DataType="vm:HiraganaViewModel">
+    <UserControl.DataContext>
+        <vm:HiraganaViewModel></vm:HiraganaViewModel>
+    </UserControl.DataContext>
+    <Grid RowDefinitions="1* 4* 2*">
+        <StackPanel 
+            Grid.Row="0"
+            Orientation="Horizontal">
+        <Button>a</Button>
+        <Button>ka</Button>
+        <Button>sa</Button>
+        <Button>ta</Button>
+        <Button>na</Button>
+        <Button>ha</Button>
+        <Button>ma</Button>
+        <Button>ya</Button>
+        <Button>ra</Button>
+        <Button>wa</Button>
+        <Button>n</Button>
+        </StackPanel>
+        <WrapPanel
+            Grid.Row="1">
+            <local:CardView Margin="6"></local:CardView>
+            <local:CardView Margin="6"></local:CardView>
+            <local:CardView Margin="6"></local:CardView>
+            <local:CardView Margin="6"></local:CardView>
+            <local:CardView Margin="6"></local:CardView>
+        </WrapPanel>
+    </Grid>
+</UserControl>
