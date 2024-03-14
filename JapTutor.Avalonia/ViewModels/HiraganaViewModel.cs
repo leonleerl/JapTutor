@@ -23,6 +23,7 @@ public partial class HiraganaViewModel : ViewModelBase
         new CardModel(){ ImageUrl = DataBlock.TempImageUrl, Name = "a"},
         new CardModel(){ ImageUrl = DataBlock.TempImageUrl, Name = "a"},
         new CardModel(){ ImageUrl = DataBlock.TempImageUrl, Name = "a"},
+        new CardModel(){ ImageUrl = DataBlock.TempImageUrl, Name = "a"},
     };
 
     #endregion
