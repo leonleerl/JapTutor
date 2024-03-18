@@ -8,6 +8,7 @@ public class BasicPronunciation
     [Key]
     public string Id { get; private set; } = Guid.NewGuid().ToString();
     public string Name { get; set; } = string.Empty;
-    public BasicPronunciationEnum Type = default!;
-    public string PronunciationUrl = string.Empty;
+    public BasicPronunciationEnum Type { get; set; } = default!;
+    public string ImgUrl { get; set; } = string.Empty;
+    public string PronunciationUrl { get; set; } = string.Empty;
 }
