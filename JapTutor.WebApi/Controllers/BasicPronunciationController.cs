@@ -26,9 +26,9 @@ namespace JapTutor.WebApi.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<BasicPronunciation>> GetByName(string name)
+        public ActionResult<BasicPronunciation> GetByName(string name)
         {
-            var basicPronunciation = await _basicPronunciationRepository.GetByNameAsync(name);
+            var basicPronunciation =  _basicPronunciationRepository.GetByNameAsync(name);
             if (basicPronunciation == null)
                 return NotFound();
             return Ok(basicPronunciation);

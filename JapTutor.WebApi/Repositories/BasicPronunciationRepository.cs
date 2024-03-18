@@ -19,8 +19,8 @@ public class BasicPronunciationRepository : IBasicPronunciationRepository
         return await _context.BasicPronunciations.ToListAsync();
     }
 
-    public async Task<BasicPronunciation?> GetByNameAsync(string name)
+    public IEnumerable<BasicPronunciation>? GetByNameAsync(string name)
     {
-        return await _context.BasicPronunciations.FirstOrDefaultAsync(c => c.Name == name);
+        return _context.BasicPronunciations.Where(c => c.Name == name);
     }
 }
