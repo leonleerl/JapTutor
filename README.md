@@ -1,1 +1,1 @@
-This is an App created for Japanese language beginner, like me, to learn basic hiragana and katakana.
+This is an App created for Japanese language beginner to learn basic hiragana and katakana.
