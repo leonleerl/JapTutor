@@ -1,6 +1,6 @@
 using JapTutor.Shared.Enum;
+using JapTutor.Shared.Models;
 using JapTutor.WebApi.Data;
-using JapTutor.WebApi.Models;
 using JapTutor.WebApi.Repositories.Interface;
 using Microsoft.EntityFrameworkCore;
 

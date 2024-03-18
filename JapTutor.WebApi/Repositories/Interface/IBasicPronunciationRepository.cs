@@ -1,5 +1,5 @@
 using System.Collections;
-using JapTutor.WebApi.Models;
+using JapTutor.Shared.Models;
 using Microsoft.CodeAnalysis.FlowAnalysis;
 
 namespace JapTutor.WebApi.Repositories.Interface;

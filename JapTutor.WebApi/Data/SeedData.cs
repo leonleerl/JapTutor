@@ -1,6 +1,6 @@
 using JapTutor.Shared.Common;
 using JapTutor.Shared.Enum;
-using JapTutor.WebApi.Models;
+using JapTutor.Shared.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace JapTutor.WebApi.Data;

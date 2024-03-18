@@ -1,4 +1,5 @@
-using JapTutor.WebApi.Models;
+
+using JapTutor.Shared.Models;
 using JapTutor.WebApi.Repositories.Interface;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;

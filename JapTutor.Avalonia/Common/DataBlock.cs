@@ -1,4 +1,5 @@
 using System;
+using AutoMapper;
 using Avalonia;
 using Avalonia.Controls;
 using JapTutor.Avalonia.Views;
@@ -17,4 +18,6 @@ public class DataBlock
 
     public static string TempImageUrl = AppDomain.CurrentDomain.BaseDirectory + "Images/a.webp";
 
+    public static IMapper mapper = default!;
+    
 }

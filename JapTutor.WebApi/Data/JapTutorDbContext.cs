@@ -1,4 +1,4 @@
-using JapTutor.WebApi.Models;
+using JapTutor.Shared.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace JapTutor.WebApi.Data;

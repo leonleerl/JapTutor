@@ -1,7 +1,7 @@
 using System.ComponentModel.DataAnnotations;
 using JapTutor.Shared.Enum;
 
-namespace JapTutor.WebApi.Models;
+namespace JapTutor.Shared.Models;
 
 public class BasicInfo
 {

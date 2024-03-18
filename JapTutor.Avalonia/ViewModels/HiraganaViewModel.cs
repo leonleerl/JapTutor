@@ -1,9 +1,15 @@
+using System.Collections;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Net.Http;
+using System.Net.Http.Json;
+using System.Text.Json.Serialization;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using JapTutor.Avalonia.Common;
-using JapTutor.Avalonia.Models;
+using JapTutor.Shared.DTOs;
+using JapTutor.Shared.Models;
+using Newtonsoft.Json;
 
 namespace JapTutor.Avalonia.ViewModels;
 
@@ -25,6 +31,12 @@ public partial class HiraganaViewModel : ViewModelBase
         if (response.IsSuccessStatusCode)
         {
             var content = await response.Content.ReadAsStringAsync();
+            IEnumerable<BasicInfo> basicInfos = JsonConvert.DeserializeObject<IEnumerable<BasicInfo>>(content);
+            foreach (var basicInfo in basicInfos)
+            {
+                var a = DataBlock.mapper.Map<BasicInfoDto>(basicInfo);
+                HiraganaCards.Add(a);
+            }
             
             // Persons = JsonConvert.DeserializeObject<ObservableCollection<PersonDto>>(content);
         }
@@ -70,17 +82,7 @@ public partial class HiraganaViewModel : ViewModelBase
 
     #region DataBinding
 
-    [ObservableProperty] private ObservableCollection<CardModel> _hiraganaCards = new()
-    {
-        new CardModel(){ ImageUrl = DataBlock.TempImageUrl, Name = "a"},
-        new CardModel(){ ImageUrl = DataBlock.TempImageUrl, Name = "a"},
-        new CardModel(){ ImageUrl = DataBlock.TempImageUrl, Name = "a"},
-        new CardModel(){ ImageUrl = DataBlock.TempImageUrl, Name = "a"},
-        new CardModel(){ ImageUrl = DataBlock.TempImageUrl, Name = "a"},
-        new CardModel(){ ImageUrl = DataBlock.TempImageUrl, Name = "a"},
-        new CardModel(){ ImageUrl = DataBlock.TempImageUrl, Name = "a"},
-        new CardModel(){ ImageUrl = DataBlock.TempImageUrl, Name = "a"},
-    };
+    [ObservableProperty] private ObservableCollection<BasicInfoDto> _hiraganaCards = new();
 
     #endregion
 }
