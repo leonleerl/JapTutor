@@ -5,7 +5,6 @@ using Avalonia.Data.Core.Plugins;
 using Avalonia.Markup.Xaml;
 using JapTutor.Avalonia.ViewModels;
 using JapTutor.Avalonia.Views;
-using Microsoft.Extensions.DependencyInjection;
 
 namespace JapTutor.Avalonia;
 

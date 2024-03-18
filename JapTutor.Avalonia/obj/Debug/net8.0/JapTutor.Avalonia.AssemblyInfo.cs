@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("JapTutor.Avalonia")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7ce05fd5a4d8b8b6292fa71b06fd7a7fa6d5327d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+73e16091b31a1f4c04587e80f36b279c7abb7ab1")]
 [assembly: System.Reflection.AssemblyProductAttribute("JapTutor.Avalonia")]
 [assembly: System.Reflection.AssemblyTitleAttribute("JapTutor.Avalonia")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
