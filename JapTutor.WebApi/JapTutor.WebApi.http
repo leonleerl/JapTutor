@@ -1,0 +1,6 @@
+@JapTutor.WebApi_HostAddress = http://localhost:5189
+
+GET {{JapTutor.WebApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

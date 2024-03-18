@@ -13,10 +13,17 @@
     <Grid RowDefinitions="1* 4* 2*">
         <StackPanel 
             Grid.Row="0"
-            Orientation="Horizontal">
-        <Button>a</Button>
-        <Button>ka</Button>
-        <Button>sa</Button>
+            Orientation="Horizontal"
+            >
+        <Button
+            Command="{Binding ShowACommand}"
+            Content="a"/>
+        <Button
+            Command="{Binding ShowKaCommand}"
+            Content="ka"/>
+        <Button
+            Command="{Binding ShowSaCommand}"
+            Content="sa"/>
         <Button>ta</Button>
         <Button>na</Button>
         <Button>ha</Button>

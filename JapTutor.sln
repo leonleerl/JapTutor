@@ -2,6 +2,10 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JapTutor.Avalonia", "JapTutor.Avalonia\JapTutor.Avalonia.csproj", "{29F6BB44-256A-43EC-8D6B-2A3550B27C69}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JapTutor.WebApi", "JapTutor.WebApi\JapTutor.WebApi.csproj", "{E21C847A-DB2B-41EC-B74A-FB388C1719A5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JapTutor.Shared", "JapTutor.Shared\JapTutor.Shared.csproj", "{60736805-A688-48F1-8893-818E21E70DAE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +16,13 @@ Global
 		{29F6BB44-256A-43EC-8D6B-2A3550B27C69}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{29F6BB44-256A-43EC-8D6B-2A3550B27C69}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{29F6BB44-256A-43EC-8D6B-2A3550B27C69}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E21C847A-DB2B-41EC-B74A-FB388C1719A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E21C847A-DB2B-41EC-B74A-FB388C1719A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E21C847A-DB2B-41EC-B74A-FB388C1719A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E21C847A-DB2B-41EC-B74A-FB388C1719A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60736805-A688-48F1-8893-818E21E70DAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60736805-A688-48F1-8893-818E21E70DAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60736805-A688-48F1-8893-818E21E70DAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60736805-A688-48F1-8893-818E21E70DAE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
