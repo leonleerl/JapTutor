@@ -5,9 +5,9 @@ using Avalonia.Markup.Xaml;
 
 namespace JapTutor.Avalonia.Views;
 
-public partial class CardView : UserControl
+public partial class BasicInfoView : UserControl
 {
-    public CardView()
+    public BasicInfoView()
     {
         InitializeComponent();
     }

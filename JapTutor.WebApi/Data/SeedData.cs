@@ -19,42 +19,42 @@ public class SeedData
                 {
                     Name = "a",
                     Type = BasicInfoEnum.Hiragana,
-                    ImageUrl = "https://cdn.goconqr.com/uploads/flash_card/image_question/243669/a.png",
+                    ImageUrl = Tools.BaseImgUrl +"/243669/a.png",
                     AudioUrl = ""
                 },
                 new BasicInfo()
                 {
                     Name = "i",
                     Type = BasicInfoEnum.Hiragana,
-                    ImageUrl = Tools.BaseImgUrl + "243671/i.png",
+                    ImageUrl = Tools.BaseImgUrl + "/243671/i.png",
                     AudioUrl = ""
                 },
                 new BasicInfo()
                 {
                     Name = "u",
                     Type = BasicInfoEnum.Hiragana,
-                    ImageUrl = Tools.BaseImgUrl + "243673/u.png",
+                    ImageUrl = Tools.BaseImgUrl + "/243673/u.png",
                     AudioUrl = ""
                 },
                 new BasicInfo()
                 {
                     Name = "e",
                     Type = BasicInfoEnum.Hiragana,
-                    ImageUrl = Tools.BaseImgUrl + "243670/e.png",
+                    ImageUrl = Tools.BaseImgUrl + "/243670/e.png",
                     AudioUrl = ""
                 },
                 new BasicInfo()
                 {
                     Name = "o",
                     Type = BasicInfoEnum.Hiragana,
-                    ImageUrl = Tools.BaseImgUrl + "243672/o.png",
+                    ImageUrl = Tools.BaseImgUrl + "/243672/o.png",
                     AudioUrl = ""
                 },
                 new BasicInfo()
                 {
                     Name = "ka",
                     Type = BasicInfoEnum.Hiragana,
-                    ImageUrl = Tools.BaseImgUrl + "243680/ka.png",
+                    ImageUrl = Tools.BaseImgUrl + "/243680/ka.png",
                     AudioUrl = ""
                 }
             );
