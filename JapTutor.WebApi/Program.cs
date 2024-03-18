@@ -1,4 +1,6 @@
 using JapTutor.WebApi.Data;
+using JapTutor.WebApi.Repositories;
+using JapTutor.WebApi.Repositories.Interface;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -15,6 +17,8 @@ builder.Services.AddDbContext<JapTutorDbContext>(config =>
     config.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
 
+builder.Services.AddScoped<IBasicPronunciationRepository, BasicPronunciationRepository>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -29,5 +33,11 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
+
+using (var scope = app.Services.CreateScope())
+{
+    var services = scope.ServiceProvider;
+    SeedData.Initialize(services);
+}
 
 app.Run();
