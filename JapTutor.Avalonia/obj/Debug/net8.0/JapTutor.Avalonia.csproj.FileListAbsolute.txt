@@ -130,3 +130,6 @@
 /Users/leonlee/Desktop/workspace/csharpworkspace/JapTutor/JapTutor.Avalonia/obj/Debug/net8.0/JapTutor.Avalonia.csproj.CopyComplete
 /Users/leonlee/Desktop/workspace/csharpworkspace/JapTutor/JapTutor.Avalonia/obj/Debug/net8.0/JapTutor.Avalonia.genruntimeconfig.cache
 /Users/leonlee/Desktop/workspace/csharpworkspace/JapTutor/JapTutor.Avalonia/obj/Debug/net8.0/ref/JapTutor.Avalonia.dll
+/Users/leonlee/Desktop/workspace/csharpworkspace/JapTutor/JapTutor.Avalonia/obj/Debug/net8.0/JapTutor.Avalonia.sourcelink.json
+/Users/leonlee/Desktop/workspace/csharpworkspace/JapTutor/JapTutor.Avalonia/bin/Debug/net8.0/JapTutor.Shared.dll
+/Users/leonlee/Desktop/workspace/csharpworkspace/JapTutor/JapTutor.Avalonia/bin/Debug/net8.0/JapTutor.Shared.pdb

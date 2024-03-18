@@ -13,7 +13,8 @@
           "Avalonia.Diagnostics": "11.0.6",
           "Avalonia.Fonts.Inter": "11.0.6",
           "Avalonia.Themes.Fluent": "11.0.6",
-          "CommunityToolkit.Mvvm": "8.2.1"
+          "CommunityToolkit.Mvvm": "8.2.1",
+          "JapTutor.Shared": "1.0.0"
         },
         "runtime": {
           "JapTutor.Avalonia.dll": {}
@@ -923,6 +924,11 @@
             "fileVersion": "0.15.0.0"
           }
         }
+      },
+      "JapTutor.Shared/1.0.0": {
+        "runtime": {
+          "JapTutor.Shared.dll": {}
+        }
       }
     }
   },
@@ -1428,6 +1434,11 @@
       "sha512": "sha512-QVo/Y39nTYcCKBqrZuwHjXdwaky0yTQPIT3qUTEEK2MZfDtZWrJ2XyZ59zH8LBgB2fL5cWaTuP2pBTpGz/GeDQ==",
       "path": "tmds.dbus.protocol/0.15.0",
       "hashPath": "tmds.dbus.protocol.0.15.0.nupkg.sha512"
+    },
+    "JapTutor.Shared/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }
