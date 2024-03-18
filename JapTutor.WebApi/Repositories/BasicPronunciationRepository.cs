@@ -1,3 +1,4 @@
+using JapTutor.Shared.Enum;
 using JapTutor.WebApi.Data;
 using JapTutor.WebApi.Models;
 using JapTutor.WebApi.Repositories.Interface;
@@ -14,13 +15,33 @@ public class BasicPronunciationRepository : IBasicPronunciationRepository
         _context = context;
     }
 
-    public async Task<IEnumerable<BasicPronunciation>?> GetAllAsync()
+    public async Task<IEnumerable<BasicInfo>?> GetAllAsync()
     {
-        return await _context.BasicPronunciations.ToListAsync();
+        return await _context.BasicInfos.ToListAsync();
     }
 
-    public IEnumerable<BasicPronunciation>? GetByNameAsync(string name)
+    public IEnumerable<BasicInfo>? GetByName(string name)
     {
-        return _context.BasicPronunciations.Where(c => c.Name == name);
+        return _context.BasicInfos.Where(c => c.Name == name);
+    }
+
+    public async Task<BasicInfo> GetById(string id)
+    {
+        return await _context.BasicInfos.FirstOrDefaultAsync(c => c.Id == id);
+    }
+
+    public IEnumerable<BasicInfo> GetAllHiragana()
+    {
+        return _context.BasicInfos.Where(c => c.Type == BasicInfoEnum.Hiragana);
+    }
+
+    public IEnumerable<BasicInfo> GetAllKatakana()
+    {
+        return _context.BasicInfos.Where(c => c.Type == BasicInfoEnum.Katakana);
+    }
+
+    public IEnumerable<BasicInfo> GetAllKanji()
+    {
+        return _context.BasicInfos.Where(c => c.Type == BasicInfoEnum.Kanji);
     }
 }

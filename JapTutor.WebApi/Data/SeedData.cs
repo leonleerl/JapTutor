@@ -12,50 +12,50 @@ public class SeedData
         using (var context = new JapTutorDbContext(
                    serviceProvider.GetRequiredService<DbContextOptions<JapTutorDbContext>>()))
         {
-            if (context.BasicPronunciations.Any())
+            if (context.BasicInfos.Any())
                 return;
-            context.BasicPronunciations.AddRange(
-                new BasicPronunciation()
+            context.BasicInfos.AddRange(
+                new BasicInfo()
                 {
                     Name = "a",
-                    Type = BasicPronunciationEnum.Hiragana,
-                    ImgUrl = "https://cdn.goconqr.com/uploads/flash_card/image_question/243669/a.png",
-                    PronunciationUrl = ""
+                    Type = BasicInfoEnum.Hiragana,
+                    ImageUrl = "https://cdn.goconqr.com/uploads/flash_card/image_question/243669/a.png",
+                    AudioUrl = ""
                 },
-                new BasicPronunciation()
+                new BasicInfo()
                 {
                     Name = "i",
-                    Type = BasicPronunciationEnum.Hiragana,
-                    ImgUrl = Tools.BaseImgUrl + "243671/i.png",
-                    PronunciationUrl = ""
+                    Type = BasicInfoEnum.Hiragana,
+                    ImageUrl = Tools.BaseImgUrl + "243671/i.png",
+                    AudioUrl = ""
                 },
-                new BasicPronunciation()
+                new BasicInfo()
                 {
                     Name = "u",
-                    Type = BasicPronunciationEnum.Hiragana,
-                    ImgUrl = Tools.BaseImgUrl + "243673/u.png",
-                    PronunciationUrl = ""
+                    Type = BasicInfoEnum.Hiragana,
+                    ImageUrl = Tools.BaseImgUrl + "243673/u.png",
+                    AudioUrl = ""
                 },
-                new BasicPronunciation()
+                new BasicInfo()
                 {
                     Name = "e",
-                    Type = BasicPronunciationEnum.Hiragana,
-                    ImgUrl = Tools.BaseImgUrl + "243670/e.png",
-                    PronunciationUrl = ""
+                    Type = BasicInfoEnum.Hiragana,
+                    ImageUrl = Tools.BaseImgUrl + "243670/e.png",
+                    AudioUrl = ""
                 },
-                new BasicPronunciation()
+                new BasicInfo()
                 {
                     Name = "o",
-                    Type = BasicPronunciationEnum.Hiragana,
-                    ImgUrl = Tools.BaseImgUrl + "243672/o.png",
-                    PronunciationUrl = ""
+                    Type = BasicInfoEnum.Hiragana,
+                    ImageUrl = Tools.BaseImgUrl + "243672/o.png",
+                    AudioUrl = ""
                 },
-                new BasicPronunciation()
+                new BasicInfo()
                 {
                     Name = "ka",
-                    Type = BasicPronunciationEnum.Hiragana,
-                    ImgUrl = Tools.BaseImgUrl + "243680/ka.png",
-                    PronunciationUrl = ""
+                    Type = BasicInfoEnum.Hiragana,
+                    ImageUrl = Tools.BaseImgUrl + "243680/ka.png",
+                    AudioUrl = ""
                 }
             );
             context.SaveChanges();

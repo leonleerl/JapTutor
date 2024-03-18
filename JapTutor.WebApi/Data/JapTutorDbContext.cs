@@ -9,5 +9,5 @@ public class JapTutorDbContext : DbContext
     {
     }
     
-    public DbSet<BasicPronunciation> BasicPronunciations { get; set; }
+    public DbSet<BasicInfo> BasicInfos { get; set; }
 }

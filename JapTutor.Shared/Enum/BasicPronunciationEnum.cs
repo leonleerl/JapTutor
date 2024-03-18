@@ -1,6 +1,6 @@
 namespace JapTutor.Shared.Enum;
 
-public enum BasicPronunciationEnum
+public enum BasicInfoEnum
 {
     Hiragana = 1,
     Katakana = 2,
