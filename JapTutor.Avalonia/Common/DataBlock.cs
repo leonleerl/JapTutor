@@ -21,7 +21,7 @@ public class DataBlock
 
     public static string ImageBasePath = AppDomain.CurrentDomain.BaseDirectory + "Images";
     
-    public static string AudioBasePath = AppDomain.CurrentDomain.BaseDirectory + "Audio";
+    public static string AudioBasePath = AppDomain.CurrentDomain.BaseDirectory + "Radios";
 
     // public static string TempImageUrl = AppDomain.CurrentDomain.BaseDirectory + "Images/a.webp";
 

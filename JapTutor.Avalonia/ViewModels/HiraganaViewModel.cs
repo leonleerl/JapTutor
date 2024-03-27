@@ -35,7 +35,7 @@ public partial class HiraganaViewModel : ViewModelBase
                 Id = Guid.NewGuid().ToString(),
                 Name = "ka",
                 Type = BasicInfoEnum.Hiragana,
-                ImageUrl = await LoadImageAsync(imagePath),
+                ImageUrl = LoadImageAsync(imagePath),
                 AudioUrl = string.Empty
             };
             // basicInfo.ImageUrl = await LoadImageAsync(imagePath);
@@ -57,11 +57,28 @@ public partial class HiraganaViewModel : ViewModelBase
                 Id = Guid.NewGuid().ToString(),
                 Name = "ka",
                 Type = BasicInfoEnum.Hiragana,
-                ImageUrl = await LoadImageAsync(imagePath),
+                ImageUrl = LoadImageAsync(imagePath),
                 AudioUrl = string.Empty
             };
             await Dispatcher.UIThread.InvokeAsync(
                 () => { HiraganaCards.Add(basicInfo); }
+            );
+        }
+
+        BasicInfo? res = await Tool.GetHiraganaByName("ka");
+        if (res != null)
+        {
+            await Dispatcher.UIThread.InvokeAsync(
+                () => { HiraganaCards.Add(res); }
+            );
+            await Dispatcher.UIThread.InvokeAsync(
+                () => { HiraganaCards.Add(res); }
+            );
+            await Dispatcher.UIThread.InvokeAsync(
+                () => { HiraganaCards.Add(res); }
+            );
+            await Dispatcher.UIThread.InvokeAsync(
+                () => { HiraganaCards.Add(res); }
             );
         }
     }
@@ -78,7 +95,7 @@ public partial class HiraganaViewModel : ViewModelBase
                 Id = Guid.NewGuid().ToString(),
                 Name = "n",
                 Type = BasicInfoEnum.Hiragana,
-                ImageUrl = await LoadImageAsync(imagePath),
+                ImageUrl = LoadImageAsync(imagePath),
                 AudioUrl = string.Empty
             };
             await Dispatcher.UIThread.InvokeAsync(
@@ -99,7 +116,7 @@ public partial class HiraganaViewModel : ViewModelBase
                 Id = Guid.NewGuid().ToString(),
                 Name = "sa",
                 Type = BasicInfoEnum.Hiragana,
-                ImageUrl = await LoadImageAsync(imagePath),
+                ImageUrl = LoadImageAsync(imagePath),
                 AudioUrl = string.Empty
             };
             // basicInfo.ImageUrl = await LoadImageAsync(imagePath);
@@ -121,7 +138,7 @@ public partial class HiraganaViewModel : ViewModelBase
                 Id = Guid.NewGuid().ToString(),
                 Name = "na",
                 Type = BasicInfoEnum.Hiragana,
-                ImageUrl = await LoadImageAsync(imagePath),
+                ImageUrl = LoadImageAsync(imagePath),
                 AudioUrl = string.Empty
             };
             await Dispatcher.UIThread.InvokeAsync(
@@ -142,7 +159,7 @@ public partial class HiraganaViewModel : ViewModelBase
                 Id = Guid.NewGuid().ToString(),
                 Name = "wa",
                 Type = BasicInfoEnum.Hiragana,
-                ImageUrl = await LoadImageAsync(imagePath),
+                ImageUrl = LoadImageAsync(imagePath),
                 AudioUrl = string.Empty
             };
             await Dispatcher.UIThread.InvokeAsync(
@@ -163,7 +180,7 @@ public partial class HiraganaViewModel : ViewModelBase
                 Id = Guid.NewGuid().ToString(),
                 Name = "ha",
                 Type = BasicInfoEnum.Hiragana,
-                ImageUrl = await LoadImageAsync(imagePath),
+                ImageUrl = LoadImageAsync(imagePath),
                 AudioUrl = string.Empty
             };
             await Dispatcher.UIThread.InvokeAsync(
@@ -184,7 +201,7 @@ public partial class HiraganaViewModel : ViewModelBase
                 Id = Guid.NewGuid().ToString(),
                 Name = "ma",
                 Type = BasicInfoEnum.Hiragana,
-                ImageUrl = await LoadImageAsync(imagePath),
+                ImageUrl = LoadImageAsync(imagePath),
                 AudioUrl = string.Empty
             };
             await Dispatcher.UIThread.InvokeAsync(
@@ -205,7 +222,7 @@ public partial class HiraganaViewModel : ViewModelBase
                 Id = Guid.NewGuid().ToString(),
                 Name = "ya",
                 Type = BasicInfoEnum.Hiragana,
-                ImageUrl = await LoadImageAsync(imagePath),
+                ImageUrl = LoadImageAsync(imagePath),
                 AudioUrl = string.Empty
             };
             await Dispatcher.UIThread.InvokeAsync(
@@ -226,7 +243,7 @@ public partial class HiraganaViewModel : ViewModelBase
                 Id = Guid.NewGuid().ToString(),
                 Name = "ta",
                 Type = BasicInfoEnum.Hiragana,
-                ImageUrl = await LoadImageAsync(imagePath),
+                ImageUrl = LoadImageAsync(imagePath),
                 AudioUrl = string.Empty
             };
             await Dispatcher.UIThread.InvokeAsync(
@@ -247,7 +264,7 @@ public partial class HiraganaViewModel : ViewModelBase
                 Id = Guid.NewGuid().ToString(),
                 Name = "ra",
                 Type = BasicInfoEnum.Hiragana,
-                ImageUrl = await LoadImageAsync(imagePath),
+                ImageUrl = LoadImageAsync(imagePath),
                 AudioUrl = string.Empty
             };
             await Dispatcher.UIThread.InvokeAsync(
@@ -255,9 +272,14 @@ public partial class HiraganaViewModel : ViewModelBase
             );
         }
     }
+    
+    [RelayCommand]
+    private void PlayAudio(object parameter)
+    {
+        int a = 2;
+    }
 
-
-    private async Task<Bitmap> LoadImageAsync(string imagePath)
+    private Bitmap? LoadImageAsync(string imagePath)
     {
         try
         {
@@ -272,6 +294,7 @@ public partial class HiraganaViewModel : ViewModelBase
             return null;
         }
     }
+    
 
     #endregion
 
