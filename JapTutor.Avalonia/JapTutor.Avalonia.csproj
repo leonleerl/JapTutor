@@ -11,7 +11,6 @@
     <ItemGroup>
         <AvaloniaResource Include="Assets\**"/>
         <None Remove="Common\Images\a.webp" />
-        <AvaloniaResource Include="Common\Images\a.webp" />
     </ItemGroup>
 
 
@@ -27,6 +26,6 @@
 
 
     <ItemGroup>
-      <ProjectReference Include="..\JapTutor.Shared\JapTutor.Shared.csproj" />
+      <None Remove="Common\Images\hiragana\ka.png" />
     </ItemGroup>
 </Project>

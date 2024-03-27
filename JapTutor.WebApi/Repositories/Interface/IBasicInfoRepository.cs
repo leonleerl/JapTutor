@@ -4,7 +4,7 @@ using Microsoft.CodeAnalysis.FlowAnalysis;
 
 namespace JapTutor.WebApi.Repositories.Interface;
 
-public interface IBasicPronunciationRepository
+public interface IBasicInfoRepository
 {
     public Task<IEnumerable<BasicInfo>?> GetAllAsync();
     public IEnumerable<BasicInfo>? GetByName(string name);
@@ -12,4 +12,5 @@ public interface IBasicPronunciationRepository
     public IEnumerable<BasicInfo>? GetAllHiragana();
     public IEnumerable<BasicInfo>? GetAllKatakana();
     public IEnumerable<BasicInfo>? GetAllKanji();
+    
 }

@@ -6,11 +6,11 @@ using Microsoft.EntityFrameworkCore;
 
 namespace JapTutor.WebApi.Repositories;
 
-public class BasicPronunciationRepository : IBasicPronunciationRepository
+public class BasicInfoRepository : IBasicInfoRepository
 {
     private readonly JapTutorDbContext _context;
 
-    public BasicPronunciationRepository(JapTutorDbContext context)
+    public BasicInfoRepository(JapTutorDbContext context)
     {
         _context = context;
     }
@@ -44,4 +44,5 @@ public class BasicPronunciationRepository : IBasicPronunciationRepository
     {
         return _context.BasicInfos.Where(c => c.Type == BasicInfoEnum.Kanji);
     }
+
 }

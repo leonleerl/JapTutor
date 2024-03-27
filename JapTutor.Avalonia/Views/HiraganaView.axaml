@@ -24,14 +24,30 @@
         <Button
             Command="{Binding ShowSaCommand}"
             Content="sa"/>
-        <Button>ta</Button>
-        <Button>na</Button>
-        <Button>ha</Button>
-        <Button>ma</Button>
-        <Button>ya</Button>
-        <Button>ra</Button>
-        <Button>wa</Button>
-        <Button>n</Button>
+        <Button
+            Command="{Binding ShowTaCommand}"
+            Content="ta"/>
+        <Button
+            Command="{Binding ShowNaCommand}"
+            Content="na"/>
+        <Button
+            Command="{Binding ShowHaCommand}"
+            Content="ha"/>
+        <Button
+            Command="{Binding  ShowMaCommand}"
+            Content="ma"/>
+        <Button
+            Command="{Binding ShowYaCommand}"
+            Content="ya"/>
+        <Button
+            Command="{Binding ShowRaCommand}"
+            Content="ra"/>
+        <Button
+            Command="{Binding ShowWaCommand}"
+            Content="wa"/>
+        <Button
+            Command="{Binding ShowNCommand}"
+            Content="n"/>
         </StackPanel>
         <ItemsControl
             Grid.Row="1"

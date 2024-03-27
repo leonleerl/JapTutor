@@ -21,6 +21,8 @@
     <ItemGroup>
       <Folder Include="Controllers\" />
       <Folder Include="Migrations\" />
+      <Folder Include="wwwroot\Images\katakana\" />
+      <Folder Include="wwwroot\Radios\" />
     </ItemGroup>
 
     <ItemGroup>

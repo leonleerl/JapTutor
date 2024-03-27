@@ -17,7 +17,8 @@ builder.Services.AddDbContext<JapTutorDbContext>(config =>
     config.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
 
-builder.Services.AddScoped<IBasicPronunciationRepository, BasicPronunciationRepository>();
+builder.Services.AddScoped<IBasicInfoRepository, BasicInfoRepository>();
+// builder.Services.AddScoped<IWebHostEnvironment>();
 
 var app = builder.Build();
 
@@ -29,6 +30,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseStaticFiles();
 
 app.UseAuthorization();
 

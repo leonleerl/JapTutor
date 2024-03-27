@@ -1,21 +1,31 @@
 
 using JapTutor.Shared.Models;
 using JapTutor.WebApi.Repositories.Interface;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace JapTutor.WebApi.Controllers
 {
     [Route("api/[controller]/[action]")]
     [ApiController]
-    public class BasicPronunciationController : ControllerBase
+    public class BasicInfoController : ControllerBase
     {
-        private readonly IBasicPronunciationRepository _basicPronunciationRepository;
+        private readonly IBasicInfoRepository _basicPronunciationRepository;
+        private readonly IWebHostEnvironment _webHostEnvironment;
+        private readonly string webRootPath;
 
-        public BasicPronunciationController(IBasicPronunciationRepository basicPronunciationRepository)
+        // public BasicInfoController(IBasicInfoRepository basicInfoRepository)
+        // {
+        //     _basicPronunciationRepository = basicInfoRepository;
+        // }
+
+        public BasicInfoController(IBasicInfoRepository basicPronunciationRepository,
+                                   IWebHostEnvironment webHostEnvironment)
         {
             _basicPronunciationRepository = basicPronunciationRepository;
+            _webHostEnvironment = webHostEnvironment;
+            webRootPath = _webHostEnvironment.WebRootPath;
         }
+
 
         [HttpGet]
         public async Task<ActionResult<IEnumerable<BasicInfo>>> GetAll()
@@ -54,7 +64,7 @@ namespace JapTutor.WebApi.Controllers
         }
 
         [HttpGet]
-        public ActionResult<BasicInfo> GetAllKatagana()
+        public ActionResult<BasicInfo> GetAllKatakana()
         {
             var katakanas = _basicPronunciationRepository.GetAllKatakana();
             if (katakanas == null)
@@ -69,6 +79,32 @@ namespace JapTutor.WebApi.Controllers
             if (kanjis == null)
                 return NotFound();
             return Ok(kanjis);
+        }
+        
+        [HttpGet("image/{fileName}")]
+        public IActionResult GetImage(string fileName)
+        {
+            string _imageFolderPath = "Images/hiragana";
+            var imagePath = Path.Combine(webRootPath, _imageFolderPath, fileName+".png");
+            if (!System.IO.File.Exists(imagePath))
+            {
+                return NotFound();
+            }
+            var imageBytes = System.IO.File.ReadAllBytes(imagePath);
+            return File(imageBytes, "image/png"); // Adjust content type as needed
+        }
+
+        [HttpGet]
+        public IActionResult GetHiraganaImgByName(string name)
+        {
+            string hiraganaPath = "Images/hiragana";
+            var imagePath = Path.Combine(webRootPath, hiraganaPath, name + ".png");
+            if (!System.IO.File.Exists(imagePath))
+            {
+                return NotFound();
+            }
+            var imageBytes = System.IO.File.ReadAllBytes(imagePath);
+            return File(imageBytes, "image/png"); // Adjust content type as needed
         }
     }
 }

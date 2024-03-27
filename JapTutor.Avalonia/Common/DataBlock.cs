@@ -1,7 +1,9 @@
 using System;
-using AutoMapper;
+using System.IO;
 using Avalonia;
 using Avalonia.Controls;
+using Avalonia.Threading;
+using JapTutor.Avalonia.Models;
 using JapTutor.Avalonia.Views;
 
 namespace JapTutor.Avalonia.Common;
@@ -16,8 +18,15 @@ public class DataBlock
 
     public static UserControl KanjiView = new KanjiView();
 
-    public static string TempImageUrl = AppDomain.CurrentDomain.BaseDirectory + "Images/a.webp";
 
-    public static IMapper mapper = default!;
+    public static string ImageBasePath = AppDomain.CurrentDomain.BaseDirectory + "Images";
     
+    public static string AudioBasePath = AppDomain.CurrentDomain.BaseDirectory + "Audio";
+
+    // public static string TempImageUrl = AppDomain.CurrentDomain.BaseDirectory + "Images/a.webp";
+
+    // public static IMapper mapper = default!;
+
+
+
 }

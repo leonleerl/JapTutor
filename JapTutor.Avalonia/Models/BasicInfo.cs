@@ -1,9 +1,9 @@
 using Avalonia.Media.Imaging;
-using JapTutor.Shared.Enum;
+using JapTutor.Avalonia.Common;
 
 namespace JapTutor.Avalonia.Models;
 
-public class BasicInfoWithImage
+public class BasicInfo
 {
     public string Id { get; set; } = string.Empty;
     public string? Name { get; set; }
