@@ -5,6 +5,7 @@
       <map>
         <entry key="JapTutor.Avalonia/App.axaml" value="JapTutor.Avalonia/JapTutor.Avalonia.csproj" />
         <entry key="JapTutor.Avalonia/Common/Icons.axaml" value="JapTutor.Avalonia/JapTutor.Avalonia.csproj" />
+        <entry key="JapTutor.Avalonia/Views/BasicInfoView.axaml" value="JapTutor.Avalonia/JapTutor.Avalonia.csproj" />
         <entry key="JapTutor.Avalonia/Views/CardView.axaml" value="JapTutor.Avalonia/JapTutor.Avalonia.csproj" />
         <entry key="JapTutor.Avalonia/Views/HiraganaView.axaml" value="JapTutor.Avalonia/JapTutor.Avalonia.csproj" />
         <entry key="JapTutor.Avalonia/Views/KanjiView.axaml" value="JapTutor.Avalonia/JapTutor.Avalonia.csproj" />
