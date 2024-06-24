@@ -72,8 +72,6 @@
                             Height="25"
                             HorizontalAlignment="Center"
                             >
-                            <!-- Command="{Binding Path=PlayAudioCommand,Mode=OneWay, RelativeSource={RelativeSource AncestorType={x:Type vm:HiraganaViewModel}, Mode=FindAncestor}}" -->
-                            <!-- CommandParameter="{Binding Name}" -->
                             <PathIcon Data="{StaticResource play_circle_regular}"></PathIcon>
                         </Button>
                     </StackPanel>

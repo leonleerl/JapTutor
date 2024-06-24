@@ -36,13 +36,19 @@ public partial class HiraganaViewModel : ViewModelBase
                 Name = "ka",
                 Type = BasicInfoEnum.Hiragana,
                 ImageUrl = LoadImageAsync(imagePath),
-                AudioUrl = string.Empty
+                AudioUrl = DataBlock.AudioBasePath + "/a.mp3"
             };
             // basicInfo.ImageUrl = await LoadImageAsync(imagePath);
             await Dispatcher.UIThread.InvokeAsync(
                 () => { HiraganaCards.Add(basicInfo); }
             );
         }
+    }
+
+    [RelayCommand]
+    private void PlayAAudio()
+    {
+        
     }
 
     [RelayCommand]
