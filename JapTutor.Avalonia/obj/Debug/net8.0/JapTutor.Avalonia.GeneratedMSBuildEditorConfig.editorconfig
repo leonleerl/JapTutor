@@ -23,7 +23,7 @@ build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 [/Users/leonlee/Desktop/workspace/csharpworkspace/JapTutor/JapTutor.Avalonia/Common/Icons.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[/Users/leonlee/Desktop/workspace/csharpworkspace/JapTutor/JapTutor.Avalonia/Views/CardView.axaml]
+[/Users/leonlee/Desktop/workspace/csharpworkspace/JapTutor/JapTutor.Avalonia/Views/BasicInfoView.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
 [/Users/leonlee/Desktop/workspace/csharpworkspace/JapTutor/JapTutor.Avalonia/Views/HiraganaView.axaml]
